@@ -18,7 +18,7 @@ export default function App() {
   return (
     <ThemeProvider theme={mode ? DarkTheme : LightTheme}>
       <CssBaseline />
-      <Grid sx={{ height: '100vh' }} container spacing={0}>
+      <Grid sx={{ height: '100vh' }} container>
         <Grid item xs='auto' container direction={'column'}>
           <Grid item xs>
             <SideBar />
@@ -29,7 +29,7 @@ export default function App() {
             </Box>
           </Grid>
         </Grid>
-        <Grid item xs>
+        <Grid item xs container>
           {page}
         </Grid>
       </Grid>
