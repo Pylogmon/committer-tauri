@@ -114,10 +114,10 @@ export default function Editor() {
                 <Button fullWidth variant='outlined' startIcon={<SaveAsOutlinedIcon />}>保存为草稿</Button>
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={3}>
-                <Button fullWidth variant='outlined' startIcon={<InsertDriveFileOutlinedIcon />} >保存为草稿</Button>
+                <Button fullWidth variant='outlined' startIcon={<InsertDriveFileOutlinedIcon />} >保存为模板</Button>
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={3}>
-                <Button fullWidth variant='contained' startIcon={<FileUploadOutlinedIcon />} >保存为草稿</Button>
+                <Button fullWidth variant='contained' startIcon={<FileUploadOutlinedIcon />} >提交工单</Button>
             </Grid>
         </Grid>
     )
