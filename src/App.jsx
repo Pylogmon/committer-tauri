@@ -10,7 +10,8 @@ import DarkTheme from './Themes/DarkTheme';
 import LightTheme from './Themes/LightTheme';
 
 export default function App() {
-  appWindow.setMinSize(new LogicalSize(600, 500))
+  appWindow.setMinSize(new LogicalSize(500, 500))
+  appWindow.setSize(new LogicalSize(910, 590))
   const [mode, setMode] = useState(true)
   const page = useRoutes(routes);
 

@@ -1,7 +1,11 @@
 import React from 'react'
+import { Box } from '@mui/material'
+import Editor from '../../components/Editor'
 
 export default function Committer() {
     return (
-        <div>Committer</div>
+        <Box sx={{ padding: '8px', overflow: 'auto' }} maxHeight='100vh'>
+            <Editor />
+        </Box>
     )
 }
