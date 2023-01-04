@@ -19,7 +19,7 @@ export default function SideBar() {
     }
 
     return (
-        <Box sx={{ padding: "8px", overflow: 'auto' }} maxHeight='90vh'>
+        <Box sx={{ padding: "8px", overflow: 'auto', width: '150px' }} maxHeight='90vh'>
             <SideBarItem to="/committer" variant={setStyle("/committer")} startIcon={<IosShareOutlinedIcon />}>创建提单</SideBarItem>
 
             <SideBarItem to="/assigned" variant={setStyle("/assigned")} startIcon={<MarkEmailUnreadOutlinedIcon />}>提到我的</SideBarItem>

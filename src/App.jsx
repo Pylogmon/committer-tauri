@@ -19,11 +19,15 @@ export default function App() {
     <ThemeProvider theme={mode ? DarkTheme : LightTheme}>
       <CssBaseline />
       <Grid sx={{ height: '100vh' }} container spacing={0}>
-        <Grid item sx={{ width: '150px' }}>
-          <SideBar />
-          <Box sx={{ position: 'absolute', padding: "0 8px", bottom: 0 }}>
-            <FormControlLabel sx={{ padding: 0 }} control={<Switch onChange={e => setMode(e.target.checked)} defaultChecked />} label="黑暗模式" />
-          </Box>
+        <Grid item xs='auto' container direction={'column'}>
+          <Grid item xs>
+            <SideBar />
+          </Grid>
+          <Grid xsOffset="auto">
+            <Box sx={{ padding: "0 8px" }}>
+              <FormControlLabel sx={{ padding: 0 }} control={<Switch onChange={e => setMode(e.target.checked)} defaultChecked />} label="黑暗模式" />
+            </Box>
+          </Grid>
         </Grid>
         <Grid item xs>
           {page}
