@@ -9,9 +9,9 @@ import routes from "./Routes";
 import DarkTheme from './Themes/DarkTheme';
 import LightTheme from './Themes/LightTheme';
 
+appWindow.setMinSize(new LogicalSize(500, 500))
+
 export default function App() {
-  appWindow.setMinSize(new LogicalSize(500, 500))
-  appWindow.setSize(new LogicalSize(910, 590))
   const [mode, setMode] = useState(true)
   const page = useRoutes(routes);
 
@@ -25,7 +25,7 @@ export default function App() {
           </Grid>
           <Grid xsOffset="auto">
             <Box sx={{ padding: "0 8px" }}>
-              <FormControlLabel sx={{ padding: 0 }} control={<Switch onChange={e => setMode(e.target.checked)} defaultChecked />} label="黑暗模式" />
+              <FormControlLabel sx={{ padding: 0 }} control={<Switch onChange={e => setMode(e.target.checked)} defaultChecked />} label="夜间模式" />
             </Box>
           </Grid>
         </Grid>

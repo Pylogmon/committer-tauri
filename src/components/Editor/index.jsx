@@ -61,7 +61,7 @@ export default function Editor() {
     return (
         <Grid item xs container sx={{ height: '100%' }} direction='column'>
             <Grid item xs sx={{ overflow: 'auto' }}>
-                <Grid container spacing={2}>
+                <Grid container spacing={2} sx={{ padding: '8px' }}>
                     <Grid item xs={6} sm={4} md={3} lg={3}>
                         <ComboBox options={typeList} onChange={(e, v) => setProduct(v)} label="产品" />
                     </Grid>
@@ -110,7 +110,7 @@ export default function Editor() {
                 </Grid>
             </Grid>
             <Grid item xsOffset="auto">
-                <Grid container spacing={2}>
+                <Grid container spacing={2} sx={{ padding: '8px' }}>
                     <Grid item xs={12} sm={6} md={3} lg={3}>
                         <TextField fullWidth size='small' onChange={e => setSendto(e.target.value)} label='抄送' />
                     </Grid>
