@@ -23,7 +23,7 @@ export default function App() {
           <Grid item xs>
             <SideBar />
           </Grid>
-          <Grid xsOffset="auto">
+          <Grid>
             <Box sx={{ padding: "0 8px" }}>
               <FormControlLabel sx={{ padding: 0 }} control={<Switch onChange={e => setMode(e.target.checked)} defaultChecked />} label="夜间模式" />
             </Box>

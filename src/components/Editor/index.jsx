@@ -109,7 +109,7 @@ export default function Editor() {
                     </Grid>
                 </Grid>
             </Grid>
-            <Grid item xsOffset="auto">
+            <Grid item>
                 <Grid container spacing={2} sx={{ padding: '8px' }}>
                     <Grid item xs={12} sm={6} md={3} lg={3}>
                         <TextField fullWidth size='small' onChange={e => setSendto(e.target.value)} label='抄送' />
