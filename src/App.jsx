@@ -1,22 +1,21 @@
 import { useState } from 'react';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { Grid, Switch, FormControlLabel, Box } from "@mui/material";
+import { appWindow, LogicalSize } from "@tauri-apps/api/window";
 import { useRoutes } from "react-router-dom";
 import SideBar from "./components/SideBar";
 import routes from "./Routes";
-import { appWindow, LogicalSize } from "@tauri-apps/api/window";
+import DarkTheme from './Themes/DarkTheme';
+import LightTheme from './Themes/LightTheme';
 
 export default function App() {
   appWindow.setMinSize(new LogicalSize(600, 500))
   const [mode, setMode] = useState(true)
   const page = useRoutes(routes);
-  const darkTheme = createTheme({
-    palette: { mode: mode ? 'dark' : 'light' }
-  });
 
   return (
-    <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={mode ? DarkTheme : LightTheme}>
       <CssBaseline />
       <Grid sx={{ height: '100vh' }} container spacing={0}>
         <Grid item sx={{ width: '150px' }}>
