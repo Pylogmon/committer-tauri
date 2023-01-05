@@ -17,7 +17,7 @@ pnpm install
 Start app
 
 ```
-pnpm tauri
+pnpm tauri dev
 ```
 
 Build

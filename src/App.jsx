@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import { Grid, Switch, FormControlLabel, Box } from "@mui/material";
+import { Grid, Switch, FormControlLabel, Box, Badge } from "@mui/material";
 import { appWindow, LogicalSize } from "@tauri-apps/api/window";
 import { useRoutes } from "react-router-dom";
 import SideBar from "./components/SideBar";
@@ -13,11 +13,12 @@ appWindow.setMinSize(new LogicalSize(500, 500))
 
 export default function App() {
   const [mode, setMode] = useState(true)
+
   const page = useRoutes(routes);
 
   return (
     <ThemeProvider theme={mode ? DarkTheme : LightTheme}>
-      <CssBaseline />
+      <CssBaseline enableColorScheme />
       <Grid sx={{ height: '100vh' }} container>
         <Grid item xs='auto' container direction={'column'}>
           <Grid item xs>

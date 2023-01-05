@@ -7,9 +7,12 @@ export default createTheme({
         primary: {
             main: orange['500'],
         },
+        secondary: {
+            main: orange['200'],
+        },
         background: {
-            default: orange['50'],
-            paper: orange['100']
+            default: '#fff',
+            paper: orange['50']
         }
     }
 })

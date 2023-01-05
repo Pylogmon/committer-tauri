@@ -2,21 +2,21 @@ import React from 'react'
 import { Button, Card, CardContent, CardActions, Typography } from '@mui/material';
 
 export default function PreViewCard(props) {
-    const { title, username, asigned, body } = props
+    const { commit } = props
     return (
         <Card>
             <CardContent>
                 <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                    username
+                    {commit.creator}
                 </Typography>
                 <Typography variant="h5" component="div">
-                    提单标题 。。。。。。。。。
+                    {commit.title}
                 </Typography>
                 <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                    asigned
+                    {commit.assigned}
                 </Typography>
                 <Typography variant="body2">
-                    内容摘要
+                    {commit.content}
                 </Typography>
             </CardContent>
             <CardActions>
