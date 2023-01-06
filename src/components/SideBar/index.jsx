@@ -40,7 +40,7 @@ export default function SideBar() {
     }, [userId])
 
     function setStyle(pathname) {
-        return location.pathname === pathname ? "contained" : "outlined"
+        return location.pathname === pathname ? "contained" : "text"
     }
 
     return (
