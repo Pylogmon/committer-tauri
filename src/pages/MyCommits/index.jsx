@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom';
 import { Grid, Box } from "@mui/material";
 import axios from 'axios';
-import PubSub from 'pubsub-js';
 import { nanoid } from 'nanoid';
 import PreViewCard from '../../components/PreViewCard';
 
 export default function MyCommits() {
     const [commitList, setCommitList] = useState([])
-    const [userId, setUserId] = useState(1)
-
-    var token = PubSub.subscribe('user_id', (_, d) => { setUserId(d) });
+    const { userId } = useParams()
 
     useEffect(() => {
         axios.get('https://committer-test-api.vercel.app/api/get_commit_list', {

@@ -49,9 +49,9 @@ export default function SideBar() {
 
             <SideBarItem to="/committer" variant={setStyle("/committer")} startIcon={<IosShareOutlinedIcon />}>创建提单</SideBarItem>
 
-            <SideBarItem to="/assigned" variant={setStyle("/assigned")} startIcon={<MarkEmailUnreadOutlinedIcon />}><Badge badgeContent={assigned} color="warning">提到我的</Badge></SideBarItem>
+            <SideBarItem to={`/assigned/${userId}`} variant={setStyle("/assigned")} startIcon={<MarkEmailUnreadOutlinedIcon />}><Badge badgeContent={assigned} color="warning">提到我的</Badge></SideBarItem>
 
-            <SideBarItem to="/my-commits" variant={setStyle("/my-commits")} startIcon={<Inventory2OutlinedIcon />}><Badge badgeContent={myCommit} color="secondary">我的提交</Badge></SideBarItem>
+            <SideBarItem to={`/my-commits/${userId}`} variant={setStyle("/my-commits")} startIcon={<Inventory2OutlinedIcon />}><Badge badgeContent={myCommit} color="secondary">我的提交</Badge></SideBarItem>
         </Box >
     )
 }

@@ -9,11 +9,11 @@ export default [
         element: <Committer />
     },
     {
-        path: "/assigned",
+        path: "/assigned/:userId",
         element: <Assigned />
     },
     {
-        path: "/my-commits",
+        path: "/my-commits/:userId",
         element: <MyCommits />
     },
     {

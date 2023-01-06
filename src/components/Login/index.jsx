@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Box, TextField, Alert, AlertTitle, Snackbar, Typography, Avatar } from '@mui/material'
+import { TextField, Alert, AlertTitle, Snackbar, Typography, Avatar } from '@mui/material'
 import LoadingButton from '@mui/lab/LoadingButton';
 import LoginIcon from '@mui/icons-material/Login';
 import LogoutIcon from '@mui/icons-material/Logout';
@@ -114,6 +114,6 @@ export default function Login() {
             <TextField fullWidth sx={{ marginBottom: '8px' }} size='small' onChange={e => setUserName(e.target.value)} label='用户名' />
             <TextField fullWidth sx={{ marginBottom: '8px' }} size='small' type='password' onChange={e => setPassword(e.target.value)} label='密码' />
             <LoadingButton fullWidth sx={{ marginBottom: '8px' }} onClick={login} endIcon={<LoginIcon />} loading={loading} loadingPosition="end" variant="contained">登录</LoadingButton>
-        </ >
+        </>
     )
 }
