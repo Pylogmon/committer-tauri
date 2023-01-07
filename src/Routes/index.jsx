@@ -1,20 +1,21 @@
-import Committer from '../pages/Committer'
-import Assigned from '../pages/Assigned'
-import MyCommits from '../pages/MyCommits'
+import { lazy, Suspense } from 'react'
 import { Navigate } from 'react-router-dom'
+const Committer = lazy(() => import('../pages/Committer'))
+const Assigned = lazy(() => import('../pages/Assigned'))
+const MyCommits = lazy(() => import('../pages/MyCommits'))
 
 export default [
     {
         path: "/committer",
-        element: <Committer />
+        element: <Suspense fallback={<h1>Loading...</h1>}><Committer /></Suspense>
     },
     {
         path: "/assigned/:userId",
-        element: <Assigned />
+        element: <Suspense fallback={<h1>Loading...</h1>}><Assigned /></Suspense>
     },
     {
         path: "/my-commits/:userId",
-        element: <MyCommits />
+        element: <Suspense fallback={<h1>Loading...</h1>}><MyCommits /></Suspense>
     },
     {
         path: "/",

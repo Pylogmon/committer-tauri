@@ -7,7 +7,7 @@ export default function PreViewCard(props) {
         <Card>
             <CardContent>
                 <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                    {commit.creator}
+                    # {commit.commit_id}
                 </Typography>
                 <Typography variant="h5" component="div">
                     {commit.title}
