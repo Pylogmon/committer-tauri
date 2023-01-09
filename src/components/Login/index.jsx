@@ -51,7 +51,7 @@ export default function Login() {
 
     function login() {
         setLoading(true)
-        axios.post('https://committer-test-api.vercel.app/api/login', {}, {
+        axios.post('https://api.huguoyang.cn/api/committer/login', {}, {
             params: {
                 user_name: userName,
                 password

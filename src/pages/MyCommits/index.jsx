@@ -10,7 +10,7 @@ export default function MyCommits() {
     const { userId } = useParams()
 
     useEffect(() => {
-        axios.get('https://committer-test-api.vercel.app/api/get_commit_list', {
+        axios.get('https://api.huguoyang.cn/api/committer/get_commit_list', {
             params: {
                 creator: userId
             }

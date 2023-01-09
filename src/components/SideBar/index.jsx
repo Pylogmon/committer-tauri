@@ -21,7 +21,7 @@ export default function SideBar() {
     var token = PubSub.subscribe('user_id', (_, d) => { setUserId(d) });
 
     useEffect(() => {
-        axios.get('https://committer-test-api.vercel.app/api/get_commit_list', {
+        axios.get('https://api.huguoyang.cn/api/committer/get_commit_list', {
             params: {
                 creator: userId
             }
@@ -29,7 +29,7 @@ export default function SideBar() {
             response => { setMyCommit(response.data.length) },
             err => { }
         )
-        axios.get('https://committer-test-api.vercel.app/api/get_commit_list', {
+        axios.get('https://api.huguoyang.cn/api/committer/get_commit_list', {
             params: {
                 assigned: userId
             }
