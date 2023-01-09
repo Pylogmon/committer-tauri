@@ -4,7 +4,7 @@ const Committer = lazy(() => import('../pages/Committer'))
 const Assigned = lazy(() => import('../pages/Assigned'))
 const MyCommits = lazy(() => import('../pages/MyCommits'))
 
-export default [
+const routes = [
     {
         path: "/committer",
         element: <Suspense fallback={<h1>Loading...</h1>}><Committer /></Suspense>
@@ -22,3 +22,5 @@ export default [
         element: <Navigate to='/committer' />
     }
 ]
+
+export default routes

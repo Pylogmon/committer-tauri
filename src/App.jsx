@@ -5,7 +5,7 @@ import { Grid, Switch, FormControlLabel, Box, Badge } from "@mui/material";
 import { appWindow, LogicalSize } from "@tauri-apps/api/window";
 import { useRoutes } from "react-router-dom";
 import SideBar from "./components/SideBar";
-import routes from "./Routes";
+import routes from "./routes";
 import DarkTheme from './Themes/DarkTheme';
 import LightTheme from './Themes/LightTheme';
 
